@@ -4,10 +4,9 @@ import {useParams,useRouteMatch} from 'react-router-dom'
 
 export default function Movie(props) {
   const [movie, setMovie] = useState();
-  const {url,path} = useRouteMatch();
 
 
-const {id} = useParams();
+  const {id} = useParams();
 
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
@@ -48,6 +47,7 @@ const {id} = useParams();
         {stars.map(star => (
           <div key={star} className="movie-star">
             {star}
+            console.log(star)
           </div>
         ))}
       </div>
